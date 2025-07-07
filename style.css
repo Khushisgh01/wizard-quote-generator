@@ -1,0 +1,131 @@
+/* === THEME STYLES === */
+:root {
+  --bg-color: #f5f5dc;
+  --text-color: #1a1a2e;
+  --accent-color: #6c5ce7;
+  --quote-bg: #fff3cd;
+  --button-bg: #ffeaa7;
+  --hover-bg: #ffe57f;
+}
+:root body {
+  background-image: url('https://wallpapers.com/images/hd/harry-potter-background-kbrb6vlqr8ych08x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #1a1a2e; /* fallback */
+}
+[data-theme="dark"] body {
+  background-image: url('https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/08/Harry-Potter-Hogwarts.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #1a1a2e; /* fallback */
+}
+
+
+[data-theme="dark"] {
+  background-image: url(https://tse3.mm.bing.net/th/id/OIP.QUCfXHdGUopzOcdROfNSZgHaEo?pid=Api&P=0&h=180);
+  --text-color: #ffffff;
+  --accent-color: #ffcb05;
+  --quote-bg: #16213e;
+  --button-bg: #ffcb05;
+  --hover-bg: #ffc107;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  cursor: none; /* hide default cursor */
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.quote-box {
+  background: var(--quote-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+#quote-text {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+#quote-character {
+  font-style: italic;
+  color: gray;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-bg);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+  background: var(--quote-bg);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  transition: background 0.3s ease;
+}
+
+/* === Magical Cursor Trail === */
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, gold, transparent);
+  opacity: 0.8;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
